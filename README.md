@@ -15,3 +15,7 @@ The scale code is for Attiny85 chip with 128x32 I2C OLED display and HX711 5kg l
   LOAD CELL DT  -| 4                 1 |-
                 -| GND               0 |- SDA LCD
 ```
+
+## Note
+
+HX711 adapter require strict 5v source to work properly. Some switching power sources for cell phones cause faulty working in this scale. That why I use step up voltage regulator instead of attiny85 board's usb.
