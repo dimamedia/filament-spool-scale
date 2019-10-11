@@ -1,7 +1,11 @@
-# Blind spool scale
+# Filament spool scale
 Scale for blind filament spools to see how much is left
 
 The scale code is for Attiny85 chip with 128x32 I2C OLED display and HX711 5kg load cell.
+
+## Parts needed
+
+[Thingiverse: filament spool scale](https://www.thingiverse.com/thing:3909051)
 
 ## Pinout
 
