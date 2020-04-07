@@ -15,8 +15,8 @@
 #define BIG_CASE 240 // // Small 3D printed airtight spool case's weight in gramms
 #define SMALL_SPOOL 109 // 3DJake small empty spool's weight in gramms
 #define BIG_SPOOL 254 // Fillamentum's 200mm empty spool's weight in gramms
-#define 250_FILAMENT  250 // 250g filament
-#define 500_FILAMENT  500 // 500g filament
+#define FILAMENT_250  250 // 250g filament
+#define FILAMENT_500  500 // 500g filament
 #define SILICA 6 // approx 6g
 
 HX711 scale;
@@ -46,7 +46,7 @@ void loop() {
 
   // Small spool weight
   float real_weight = scale.get_units()*1000-SMALL_CASE-SMALL_SPOOL-SILICA;
-  float pros = (real_weight/250_FILAMENT)*100;
+  float pros = (real_weight/FILAMENT_250)*100;
   if(pros < 0) pros = 0;
   oled.setCursor(0, 2);
   oled.print(F("3DJake 250: "));
@@ -55,7 +55,7 @@ void loop() {
 
   // Big spool weight
   real_weight = scale.get_units()*1000-BIG_CASE-BIG_SPOOL-SILICA;
-  pros = (real_weight/500_FILAMENT)*100;
+  pros = (real_weight/FILAMENT_500)*100;
   if(pros < 0) pros = 0;
   oled.setCursor(0, 3);
   oled.print(F("Fillamentum 500: "));
