@@ -1,6 +1,6 @@
 /*
  * Blind spool scale V1.0
- * 2019-10-10
+ * 2020-04-07
  * Author: Dima Tsvetkov
  * GNU v3 License
  */
